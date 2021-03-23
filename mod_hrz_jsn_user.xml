@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.6" client="site" method="upgrade">
+    <name>JSN User Profile</name>
+    <author>Stefan Herzog</author>
+    <creationDate>August 2020</creationDate>
+    <version>0.0.8</version>
+    <description>Modul zum Anzeigen eines Users als Modul</description>
+    <files>
+        <filename>mod_hrz_jsn_user.xml</filename>
+        <filename module="mod_hrz_jsn_user">mod_hrz_jsn_user.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+		<folder>css</folder>
+    </files>
+    <config>
+	    <fields name="params">
+	    	<fieldset name="basic">
+			<field name="userid" type="user"
+				label="MOD_HRZ_JSN_USER_LABEL_CHOSEN_USER"
+			/>
+			<field name="defaultContactAddress"
+				   type="text"
+				   default="/kontakt"
+				   required="true"
+				   label="MOD_HRZ_JSN_USER_LABEL_DEFAULTCONTACTADDRESS"
+			/>
+			<field name="parameterName"
+				   type="text"
+				   size="15"
+				   default="cfid"
+				   required="true"
+				   label="MOD_HRZ_JSN_USER_LABEL_PARAMETERNAME"
+			/>
+	    	</fieldset>
+	    </fields>
+    </config>
+    <updateservers>
+  	<server type="extension" priority="1" name="mod_hrz_jsn_user">TBF</server>
+  	</updateservers>
+</extension>

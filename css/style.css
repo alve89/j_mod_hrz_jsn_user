@@ -1,0 +1,89 @@
+	div.jsn_user_profile {
+		padding: 0px;
+		line-height: 1.3rem;
+		font-family: "Lato", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	}
+
+	.jsn_user_profile_wrapper {
+		margin-bottom: 0.5rem;
+	}
+
+	.jsn_user_profile_avatar img {
+		border-radius: 50%;
+		width: 100%;
+		height: auto;
+	}
+
+	.jsn_user_profile_avatar {
+		text-align: center;
+	}
+	
+	.jsn_user_profile_contact {
+		text-align: center;
+	}
+	
+	.jsn_user_profile_contact_icon a {
+		border: 1px solid currentColor;
+		width: 40px;
+		height: 40px;
+		padding: 10px 5px;
+		display: inline-block;
+		border-radius: 50%;
+		line-height: 1.1;
+		text-align: center;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	.jsn_user_profile_name {
+		font-size: 22px;
+		text-align: center;
+		font-weight: 500;
+	}
+	
+	.jsn_user_profile_bereich {
+		text-align: center;
+		font-weight: 200;
+	}
+	
+	.jsn_user_profile_abteilung {
+		text-align: center;
+		font-weight: 300;
+		margin-top: 0.7rem;
+	}
+
+	.jsn_user_profile_position {
+		text-align: center;
+		font-weight: 500;
+		
+	}
+	
+	h4 {
+		font-family: "Lato", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	}
+	
+	.jsn_user_profile_name h4 {
+		margin-bottom: 0.55rem;
+		font-weight: 450;
+	}
+	
+	.jsn_user_profile_contact {
+		margin-top: 0.8rem;
+	}
+
+	.jsn_user_profile_contact_icon_mail_mobile {
+		display: inline-block;
+	}
+	.jsn_user_profile_contact_icon_mail_desktop {
+		display: none;	
+	}
+
+
+	@media (min-width: 900px) {
+		.jsn_user_profile_contact_icon_mail_mobile {
+			display: none;
+		}
+		.jsn_user_profile_contact_icon_mail_desktop {
+			display: inline-block;	
+		}
+	}

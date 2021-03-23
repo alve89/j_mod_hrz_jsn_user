@@ -37,6 +37,6 @@
 	    </fields>
     </config>
     <updateservers>
-  	<server type="extension" priority="1" name="mod_hrz_jsn_user">https://raw.githubusercontent.com/alve89/j_mod_hrz_jsn_user/master/mod_hrz_jsn_user.xml</server>
+  	<server type="extension" priority="1" name="mod_hrz_jsn_user">https://raw.githubusercontent.com/alve89/j_mod_hrz_jsn_user/master/updates.xml</server>
   	</updateservers>
 </extension>

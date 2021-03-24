@@ -53,19 +53,21 @@ $user->kontaktadresse .= 'uid='.$user->getValue('id');
 	</div>
 	<div class="jsn_user_profile_contact jsn_user_profile">
 		<div class="jsn_user_profile_contact_icon">
-			<div class="jsn_user_profile_contact_icon_mail_desktop">
-				<a href="<?=$user->kontaktadresse;?>" target="_blank">
-					<i class="fa fa-envelope"></i>
-				</a>
-			</div>
-			<div class="jsn_user_profile_contact_icon_mail_mobile">
-				<a href="<?=$user->kontaktadresse;?>" target="_blank">
-					<i class="fa fa-envelope"></i>
-				</a>
-
-			</div>
 			<?php
-				if(!empty($user->getValue('telefonnummer'))) {?>
+			if($params->show_mail) {?>
+				<div class="jsn_user_profile_contact_icon_mail_desktop">
+					<a href="<?=$user->kontaktadresse;?>" target="_blank">
+						<i class="fa fa-envelope"></i>
+					</a>
+				</div>
+				<div class="jsn_user_profile_contact_icon_mail_mobile">
+					<a href="<?=$user->kontaktadresse;?>" target="_blank">
+						<i class="fa fa-envelope"></i>
+					</a>
+
+				</div>
+			<?php }
+				if($params->show_phone && !empty($user->getValue('telefonnummer'))) {?>
 					<a href="tel:<?=$user->getValue('telefonnummer');?>">
 						<i class="fa fa-phone"></i>
 					</a>

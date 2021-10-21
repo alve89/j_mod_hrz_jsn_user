@@ -4,7 +4,7 @@
         <description></description>
         <element>mod_hrz_jsn_user</element>
         <type>module</type>
-        <version>0.0.11</version>
+        <version>0.0.12</version>
         <client>0</client>
         <infourl title="JSN User Module" />
         <downloads>

@@ -3,7 +3,7 @@
     <name>JSN User Profile</name>
     <author>Stefan Herzog</author>
     <creationDate>August 2020</creationDate>
-    <version>0.0.11</version>
+    <version>0.0.12</version>
     <description>Modul zum Anzeigen eines Users als Modul</description>
     <files>
         <filename>mod_hrz_jsn_user.xml</filename>

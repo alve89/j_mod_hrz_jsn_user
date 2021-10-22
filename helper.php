@@ -1,9 +1,6 @@
 <?php
-class ModHrzJSNUser
-{
+class ModHrzJSNUserHelper {
 
-
-    
     public static function varDump($var)
     {
 		echo '<pre>';

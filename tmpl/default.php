@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 // No direct access
 defined('_JEXEC') or die;
 
@@ -29,7 +28,7 @@ else {
 !empty(parse_url($user->kontaktadresse)['query']) ? $user->kontaktadresse .= '&' : $user->kontaktadresse .= '?';
 
 $user->kontaktadresse .= 'uid='.$user->getValue('id');
-	
+
 
 
 ?>
@@ -56,15 +55,22 @@ $user->kontaktadresse .= 'uid='.$user->getValue('id');
 			<?php
 			if($params->get('show_mail')) {?>
 				<div class="jsn_user_profile_contact_icon_mail_desktop">
-					<a href="<?=$user->kontaktadresse;?>" target="_blank">
-						<i class="fa fa-envelope"></i>
-					</a>
+					<form name="contactLink" action="<?=$params->get('defaultContactAddress');?>" method="post" target="_blank">
+						<input type="hidden" name="<?=$params->get('parameterName');?>" value="<?=$user->getValue('convert_forms_contact_id');?>" />
+						<input type="hidden" name="uid" value="<?=$user->getValue('id');?>" />
+						<button type="submit" style="width: 40px; height: 40px; border-radius: 50%; background-color: white; border: 1px solid currentColor">
+							<i class="fa fa-envelope"></i>
+						</button>
+					</form>
 				</div>
 				<div class="jsn_user_profile_contact_icon_mail_mobile">
-					<a href="<?=$user->kontaktadresse;?>" target="_blank">
-						<i class="fa fa-envelope"></i>
-					</a>
-
+					<form name="contactLink" action="<?=$params->get('defaultContactAddress');?>" method="post" target="_blank">
+						<input type="hidden" name="<?=$params->get('parameterName');?>" value="<?=$user->getValue('convert_forms_contact_id');?>" />
+						<input type="hidden" name="uid" value="<?=$user->getValue('id');?>" />
+						<button type="submit" style="width: 40px; height: 40px; border-radius: 50%; background-color: white; border: 1px solid currentColor">
+							<i class="fa fa-envelope"></i>
+						</button>
+					</form>
 				</div>
 			<?php }
 				if($params->get('show_phone') && !empty($user->getValue('telefonnummer'))) {?>

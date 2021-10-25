@@ -3,7 +3,7 @@
     <name>JSN User Profile</name>
     <author>Stefan Herzog</author>
     <creationDate>August 2020</creationDate>
-    <version>0.0.12</version>
+    <version>0.0.13</version>
     <description>Modul zum Anzeigen eines Users als Modul</description>
     <files>
         <filename>mod_hrz_jsn_user.xml</filename>
@@ -17,38 +17,39 @@
     <config>
 	    <fields name="params">
 	    	<fieldset name="basic">
-			<field name="userid" type="user"
-				label="MOD_HRZ_JSN_USER_LABEL_CHOSEN_USER"
-			/>
-			<field name="defaultContactAddress"
-				   type="text"
-				   default="/kontakt"
-				   required="true"
-				   label="MOD_HRZ_JSN_USER_LABEL_DEFAULTCONTACTADDRESS"
-			/>
-			<field name="parameterName"
-				   type="text"
-				   size="15"
-				   default="cfid"
-				   required="true"
-				   label="MOD_HRZ_JSN_USER_LABEL_PARAMETERNAME"
-			/>
-			<field name="show_mail" 
-			       type="radio" default="0"
-			       label="MOD_HRZ_JSN_USER_LABEL_SHOW_MAIL"
-			       description="MOD_HRZ_JSN_USER_DESC_SHOW_MAIL"
-			       class="btn-group btn-group-yesno">
-				<option value="1">JYES</option>
-				<option value="0">JNO</option>
-			</field>
-			<field name="show_phone" 
-			       type="radio" default="0"
-			       label="MOD_HRZ_JSN_USER_LABEL_SHOW_PHONE"
-			       description="MOD_HRZ_JSN_USER_DESC_SHOW_PHONE"
-			       class="btn-group btn-group-yesno">
-				<option value="1">JYES</option>
-				<option value="0">JNO</option>
-			</field>
+    			<field name="userid"
+                  type="user"
+    				      label="MOD_HRZ_JSN_USER_LABEL_CHOSEN_USER"
+    			/>
+    			<field name="defaultContactAddress"
+                  type="text"
+                  default="/kontakt"
+                  required="true"
+                  label="MOD_HRZ_JSN_USER_LABEL_DEFAULTCONTACTADDRESS"
+    			/>
+    			<field name="parameterName"
+                  type="text"
+                  size="15"
+                  default="cfid"
+                  required="true"
+                  label="MOD_HRZ_JSN_USER_LABEL_PARAMETERNAME"
+    			/>
+    			<field name="show_mail"
+    			       type="radio" default="0"
+    			       label="MOD_HRZ_JSN_USER_LABEL_SHOW_MAIL"
+    			       description="MOD_HRZ_JSN_USER_DESC_SHOW_MAIL"
+    			       class="btn-group btn-group-yesno" >
+    				<option value="1">JYES</option>
+    				<option value="0">JNO</option>
+    			</field>
+    			<field name="show_phone"
+    			       type="radio" default="0"
+    			       label="MOD_HRZ_JSN_USER_LABEL_SHOW_PHONE"
+    			       description="MOD_HRZ_JSN_USER_DESC_SHOW_PHONE"
+    			       class="btn-group btn-group-yesno" >
+    				<option value="1">JYES</option>
+    				<option value="0">JNO</option>
+    			</field>
 	    	</fieldset>
 	    </fields>
     </config>

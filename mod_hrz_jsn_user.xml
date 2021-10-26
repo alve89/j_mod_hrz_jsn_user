@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.6" client="site" method="upgrade">
-    <name>JSN User Profile</name>
+    <name>mod_hrz_jsn_user</name>
     <author>Stefan Herzog</author>
     <creationDate>August 2020</creationDate>
-    <version>0.0.13</version>
+    <version>0.0.14</version>
     <description>Modul zum Anzeigen eines Users als Modul</description>
+    <scriptfile>script.php</scriptfile>
     <files>
         <filename>mod_hrz_jsn_user.xml</filename>
         <filename module="mod_hrz_jsn_user">mod_hrz_jsn_user.php</filename>

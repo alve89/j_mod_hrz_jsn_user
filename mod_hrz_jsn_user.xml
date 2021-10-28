@@ -3,8 +3,8 @@
     <name>mod_hrz_jsn_user</name>
     <author>Stefan Herzog</author>
     <creationDate>August 2020</creationDate>
-    <version>0.0.14</version>
-    <description>Modul zum Anzeigen eines Users als Modul</description>
+    <version>0.0.15</version>
+    <description>Modul zum Anzeigen eines Users</description>
     <scriptfile>script.php</scriptfile>
     <files>
         <filename>mod_hrz_jsn_user.xml</filename>
@@ -24,10 +24,44 @@
     			/>
     			<field name="defaultContactAddress"
                   type="text"
-                  default="/kontakt"
+                  default="/direktkontakt"
                   required="true"
                   label="MOD_HRZ_JSN_USER_LABEL_DEFAULTCONTACTADDRESS"
     			/>
+          <field name="parameterName"
+                  type="text"
+                  size="15"
+                  default="cfid"
+                  required="true"
+                  label="MOD_HRZ_JSN_USER_LABEL_PARAMETERNAME"
+    			/>
+          <field name="useSpecialInfomation"
+    			       type="radio" default="0"
+    			       label="MOD_HRZ_JSN_USER_LABEL_USESPECIALINFORMATION"
+    			       description="MOD_HRZ_JSN_USER_DESC_USESPECIALINFORMATION"
+    			       class="btn-group btn-group-yesno" >
+    				<option value="1">JYES</option>
+    				<option value="0">JNO</option>
+    			</field>
+          <field name="area"
+                  type="category"
+                  extension="com_content"
+                  default=""
+                  label="MOD_HRZ_JSN_USER_LABEL_BUSINESS"
+                  showon="useSpecialInfomation:1"
+          />
+          <field name="department"
+                  type="text"
+                  default=""
+                  label="MOD_HRZ_JSN_USER_LABEL_DEPARTMENT"
+                  showon="useSpecialInfomation:1"
+          />
+          <field name="role"
+                  type="text"
+                  default=""
+                  label="MOD_HRZ_JSN_USER_LABEL_ROLE"
+                  showon="useSpecialInfomation:1"
+          />
     			<field name="parameterName"
                   type="text"
                   size="15"

@@ -26,8 +26,53 @@ else {
 	JPluginHelper::importPlugin('content');
 	$module->content = JHtml::_('content.prepare', $params->get('content'), '', 'mod_hrz_jsn_user.content');
 
+	$id = $params->get('area');
 
 	$user=new JsnUser($params->get('userid'));
+
+	if($params->get('useSpecialInfomation')) {
+		$db = JFactory::getDBO();
+		$query = $db->getQuery(true);
+		$query->select($db->quoteName('#__categories.title'));
+		$query->from($db->quoteName('#__categories'));
+		$query->where($db->quoteName('#__categories.id') . '=' . $db->quote($id));
+		$db->setQuery((string) $query);
+		$category = $db->loadResult();
+		$user->area = $category;
+		$user->department = $params->get('department');
+		$user->role = $params->get('role');
+	}
+	else {
+		$user->area = $user->get('bereich');
+		$user->department = $user->get('abteilung');
+		$user->role = $user->get('position');
+	}
+
+	if(!empty($user->getValue('kontaktseite'))) {
+		// Kontaktseite IST definiert
+		if(!empty($user->getValue('convert_forms_contact_id')) && !empty($params->get('parameterName'))) {
+			$user->kontaktadresse = $user->getValue('kontaktseite') . '?' . $params->get('parameterName') . '=' . $user->getValue('convert_forms_contact_id');
+		}
+		else {
+
+			$user->kontaktadresse = $user->getValue('kontaktseite');
+		}
+	}
+	else {
+		// Kontaktseite ist NICHT definiert
+		if(!empty($user->getValue('convert_forms_contact_id')) && !empty($params->get('parameterName'))) {
+			$user->kontaktadresse = $params->get('defaultContactAddress') . '?' . $params->get('parameterName') . '=' . $user->getValue('convert_forms_contact_id');
+		}
+		else {
+			$user->kontaktadresse = $params->get('defaultContactAddress');
+		}
+	}
+
+	!empty(parse_url($user->kontaktadresse)['query']) ? $user->kontaktadresse .= '&' : $user->kontaktadresse .= '?';
+	$user->kontaktadresse .= 'uid='.$user->getValue('id');
+
+
+
 
 	// Render output
 	require JModuleHelper::getLayoutPath('mod_hrz_jsn_user');

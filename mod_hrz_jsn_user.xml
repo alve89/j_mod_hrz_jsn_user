@@ -3,7 +3,7 @@
     <name>mod_hrz_jsn_user</name>
     <author>Stefan Herzog</author>
     <creationDate>August 2020</creationDate>
-    <version>0.0.15</version>
+    <version>0.0.16</version>
     <description>Modul zum Anzeigen eines Users</description>
     <scriptfile>script.php</scriptfile>
     <files>

@@ -11,7 +11,7 @@ $document->addStyleSheet(JURI::base().'modules/'.$module->module . '/css/style.c
 
 <div class="jsn_user_profile_wrapper">
 	<div class="jsn_user_profile_avatar jsn_user_profile">
-		<img src="/<?=$user->getValue('avatar');?>" />
+		<img src="<?=$user->getValue('avatar');?>" />
 	</div>
 	<div class="jsn_user_profile_name jsn_user_profile">
 		<h4><?=$user->getValue('firstname') . ' ' . $user->getValue('lastname');?></h4>

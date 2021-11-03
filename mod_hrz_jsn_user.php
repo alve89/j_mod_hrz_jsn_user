@@ -66,6 +66,11 @@ else {
 		else {
 			$user->kontaktadresse = $params->get('defaultContactAddress');
 		}
+
+		if(substr($user->getValue('avatar'),0,1) != '/') {
+			$user->avatar = '/'.$user->getValue('avatar');
+		}
+
 	}
 
 	!empty(parse_url($user->kontaktadresse)['query']) ? $user->kontaktadresse .= '&' : $user->kontaktadresse .= '?';

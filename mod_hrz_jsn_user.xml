@@ -3,7 +3,7 @@
     <name>mod_hrz_jsn_user</name>
     <author>Stefan Herzog</author>
     <creationDate>August 2020</creationDate>
-    <version>0.0.16</version>
+    <version>0.0.17</version>
     <description>Modul zum Anzeigen eines Users</description>
     <scriptfile>script.php</scriptfile>
     <files>
@@ -13,20 +13,26 @@
         <filename>helper.php</filename>
         <filename>tmpl/default.php</filename>
         <filename>tmpl/index.html</filename>
-		<folder>css</folder>
+		    <folder>css</folder>
     </files>
+    <languages>
+    		<language tag="de-DE">languages/de-DE/de-DE.mod_hrz_jsn_user.ini</language>
+    		<language tag="de-DE">languages/de-DE/de-DE.mod_hrz_jsn_user.sys.ini</language>
+  	</languages>
     <config>
 	    <fields name="params">
 	    	<fieldset name="basic">
     			<field name="userid"
                   type="user"
     				      label="MOD_HRZ_JSN_USER_LABEL_CHOSEN_USER"
+                  description="MOD_HRZ_JSN_USER_DESC_CHOSEN_USER"
     			/>
     			<field name="defaultContactAddress"
                   type="text"
                   default="/direktkontakt"
                   required="true"
                   label="MOD_HRZ_JSN_USER_LABEL_DEFAULTCONTACTADDRESS"
+                  description="MOD_HRZ_JSN_USER_DESC_DEFAULTCONTACTADDRESS"
     			/>
           <field name="parameterName"
                   type="text"
@@ -34,6 +40,7 @@
                   default="cfid"
                   required="true"
                   label="MOD_HRZ_JSN_USER_LABEL_PARAMETERNAME"
+                  description="MOD_HRZ_JSN_USER_DESC_PARAMETERNAME"
     			/>
           <field name="useSpecialInfomation"
     			       type="radio" default="0"
@@ -48,27 +55,23 @@
                   extension="com_content"
                   default=""
                   label="MOD_HRZ_JSN_USER_LABEL_BUSINESS"
+                  description="MOD_HRZ_JSN_USER_DESC_BUSINESS"
                   showon="useSpecialInfomation:1"
           />
           <field name="department"
                   type="text"
                   default=""
                   label="MOD_HRZ_JSN_USER_LABEL_DEPARTMENT"
+                  description="MOD_HRZ_JSN_USER_DESC_DEPARTMENT"
                   showon="useSpecialInfomation:1"
           />
           <field name="role"
                   type="text"
                   default=""
                   label="MOD_HRZ_JSN_USER_LABEL_ROLE"
+                  description="MOD_HRZ_JSN_USER_DESC_ROLE"
                   showon="useSpecialInfomation:1"
           />
-    			<field name="parameterName"
-                  type="text"
-                  size="15"
-                  default="cfid"
-                  required="true"
-                  label="MOD_HRZ_JSN_USER_LABEL_PARAMETERNAME"
-    			/>
     			<field name="show_mail"
     			       type="radio" default="0"
     			       label="MOD_HRZ_JSN_USER_LABEL_SHOW_MAIL"

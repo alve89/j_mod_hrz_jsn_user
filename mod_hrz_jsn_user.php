@@ -31,14 +31,14 @@ else {
 	$user=new JsnUser($params->get('userid'));
 
 	if($params->get('useSpecialInfomation')) {
-		$db = JFactory::getDBO();
-		$query = $db->getQuery(true);
-		$query->select($db->quoteName('#__categories.title'));
-		$query->from($db->quoteName('#__categories'));
-		$query->where($db->quoteName('#__categories.id') . '=' . $db->quote($id));
-		$db->setQuery((string) $query);
-		$category = $db->loadResult();
-		$user->area = $category;
+		// $db = JFactory::getDBO();
+		// $query = $db->getQuery(true);
+		// $query->select($db->quoteName('#__categories.title'));
+		// $query->from($db->quoteName('#__categories'));
+		// $query->where($db->quoteName('#__categories.id') . '=' . $db->quote($id));
+		// $db->setQuery((string) $query);
+		// $category = $db->loadResult();
+		// $user->area = $category;
 		$user->department = $params->get('department');
 		$user->role = $params->get('role');
 	}

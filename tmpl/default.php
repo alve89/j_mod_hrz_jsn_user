@@ -16,9 +16,9 @@ $document->addStyleSheet(JURI::base().'modules/'.$module->module . '/css/style.c
 	<div class="jsn_user_profile_name jsn_user_profile">
 		<h4><?=$user->getValue('firstname') . ' ' . $user->getValue('lastname');?></h4>
 	</div>
-	<div class="jsn_user_profile_bereich jsn_user_profile">
+	<!-- <div class="jsn_user_profile_bereich jsn_user_profile">
 		<?=$user->area?>
-	</div>
+	</div> -->
 	<div class="jsn_user_profile_abteilung jsn_user_profile">
 		<?=$user->department;?>
 	</div>

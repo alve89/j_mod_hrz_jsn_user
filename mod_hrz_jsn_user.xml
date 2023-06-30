@@ -50,14 +50,6 @@
     				<option value="1">JYES</option>
     				<option value="0">JNO</option>
     			</field>
-          <field name="area"
-                  type="category"
-                  extension="com_content"
-                  default=""
-                  label="MOD_HRZ_JSN_USER_LABEL_BUSINESS"
-                  description="MOD_HRZ_JSN_USER_DESC_BUSINESS"
-                  showon="useSpecialInfomation:1"
-          />
           <field name="department"
                   type="text"
                   default=""

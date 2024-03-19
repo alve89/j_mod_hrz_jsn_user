@@ -55,6 +55,8 @@ if(!is_null($userDetails)) {
 		}
 	}
 
+	$user->uid = $params->get('userid');
+
 	}
 	if($params->get('useSpecialInfomation')) {
 		$user->department = $params->get('department');
@@ -82,7 +84,7 @@ if(!is_null($userDetails)) {
 	}
 
 
-	$user->contactAddress = trim(JUri::base() . ltrim($params->get('defaultContactAddress'), '/') . '?' . $params->get('parameterName') . '=' . $user->cfid);
+	$user->contactAddress = trim(JUri::base() . ltrim($params->get('defaultContactAddress'), '/') . '?' . $params->get('parameterName') . '=' . $user->cfid . '&uid=' . $user->uid);
 	$user->phone = ltrim($user->phone,'.');
 
 	// Render output

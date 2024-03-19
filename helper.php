@@ -1,5 +1,5 @@
 <?php
-class ModHrzJSNUserHelper {
+class ModHrzShowSingleUserHelper {
 
     public static function varDump($var)
     {

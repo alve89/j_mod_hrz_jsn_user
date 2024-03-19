@@ -1,4 +1,14 @@
-	div.jsn_user_profile {
+	span.userFirstName, span.userLastName {
+		font-weight: bold;
+		font-size:larger;
+	}
+
+	span.userDepartment {
+		font-weight: 600;
+	}
+	
+	
+	/* div.jsn_user_profile {
 		padding: 0px;
 		line-height: 1.3rem;
 		font-family: "Lato", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
@@ -86,4 +96,4 @@
 		.jsn_user_profile_contact_icon_mail_desktop {
 			display: inline-block;	
 		}
-	}
+	} */
